@@ -1,5 +1,9 @@
 # Fleet Telemetry and vLLM Operations Copilot
 
+![Architecture flowchart](docs/architecture.svg)
+
+![Verified fleet replay output](docs/replay-output.svg)
+
 A robotics fleet observability project. Robots publish structured telemetry over MQTT; the monitor validates messages, computes freshness/battery/error health, and optionally sends only the derived incident facts to a vLLM operations copilot.
 
 ## Replay actual message shapes
