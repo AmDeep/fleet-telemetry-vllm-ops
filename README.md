@@ -26,3 +26,11 @@ For production MQTT, configure TLS, authentication, topic authorization, QoS/ses
 ## vLLM boundary
 
 `incident_prompt.py` creates a grounded prompt from computed facts. It never asks the model to infer missing telemetry. A future operator UI can send that prompt to an OpenAI-compatible vLLM endpoint and display the response alongside the original facts.
+
+## NVIDIA / fleet operations paths
+
+- `fleet_ops.nvidia_health` parses real Jetson `tegrastats`-style RAM, CPU, and GR3D utilization lines.
+- `fleet_ops.prometheus` exports robot freshness/battery metrics plus Jetson health in Prometheus text format.
+- This supports Jetson edge observability alongside Triton or TensorRT inference metrics; no GPU utilization is claimed unless an actual `tegrastats` line is supplied.
+
+Official references: [Triton Inference Server](https://docs.nvidia.com/deeplearning/triton-inference-server/user-guide/docs/) and [TensorRT](https://developer.nvidia.com/tensorrt).
