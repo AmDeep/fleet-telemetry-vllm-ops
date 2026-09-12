@@ -1,0 +1,2 @@
+{"robot_id":"unit-01","timestamp_s":1700000058,"battery_pct":76.0,"x_m":1.2,"y_m":0.4,"faults":[]}
+{"robot_id":"unit-02","timestamp_s":1700000000,"battery_pct":14.0,"x_m":-0.5,"y_m":2.1,"faults":["wheel_current_high"]}
